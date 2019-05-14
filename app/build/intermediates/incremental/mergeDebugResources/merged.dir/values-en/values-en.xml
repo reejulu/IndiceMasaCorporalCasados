@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="altura_requerida">Your heigth in (cm)</string>
+    <string name="alturaprevia">sin dato</string>
+    <string name="app_name">BodyMassIndex</string>
+    <string name="bajopeso">UNDERWEIGHT</string>
+    <string name="boton_borrar">INITIAL VALUES</string>
+    <string name="boton_calculo">Calculate your BMI</string>
+    <string name="boton_hombre">man</string>
+    <string name="boton_mujer">woman</string>
+    <string name="desnutrido">SEVERELY UNDERWEIGHT</string>
+    <string name="imc_obtenido">BMI obtained</string>
+    <string name="imc_tipo">BMI type</string>
+    <string name="normal">HEALTHY WEIGHT</string>
+    <string name="obeso">OBESE</string>
+    <string name="peso_requerido">Your weigth in (Kg)</string>
+    <string name="pesoprevio">sin dato</string>
+    <string name="saludo">Hello</string>
+    <string name="sobrepeso">OVERWEIGHT</string>
+    <string name="titulo">Calculate your BMI</string>
+    <style name="npColour">npColour</style>
+</resources>

@@ -1,22 +1,14 @@
 package com.example.indicemasacorporalcasa;
 
-import android.content.Context;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
-import android.os.PersistableBundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -105,24 +97,7 @@ public class MainActivity extends AppCompatActivity {
         // ahora asignar la imagen
         imageView.setImageResource(R.mipmap.ic_launcher);
         // para ejecutar la simulacion del boton calcular IMC
-        /**
-        String titulo = getResources().getString(R.string.titulo);
-        String obeso = "OBESO";
-        String sobrepeso = "SOBREPESO";
-        String normal = "NORMAL";
-        String bajopeso = "BAJOPESO";
-        String desnutrido = "DESNUTRIDO";
 
-        if (titulo.contains("titulo")) {
-
-        }else {
-            obeso = "OBESE";
-            sobrepeso = "OVERWEIGHT";
-            normal = "HEALTHY WEIGHT";
-            bajopeso = "UNDERWEIGHT";
-            desnutrido = "SEVERELY UNDERWEIGHT";
-        }
-        */
         // PARA QUE SOLO SE EJECUTE LA PRIMERA VEZ EL METODO SIMULARCALCULARIMC
         if (savedInstanceState == null){
             simularcalcularIMC();
@@ -502,6 +477,35 @@ public void asignarimagen(TipoIMC tipo) {
         TipoIMC tipo = TipoIMC.traduceIMC( imc);
 
         // ahora hay que traducir el tipo al idioma en curso
+        // carga estados tipo de las variables string
+        // la respuesta es un string con el tipo en el idioma seleccionado
+        String tipotraducido = cargarStrings(tipo);
+
+        tipoCalculado.setText(""+ tipotraducido);        // asignar imagen en funcion del tipo
+        asignarimagen(tipo);
+    }
+
+
+    public enum TipoIMC {DESNUTRIDO, BAJOPESO, NORMAL, SOBREPESO, OBESO;
+        public static TipoIMC traduceIMC (double imc)
+        {
+            TipoIMC devuelvo = null;
+            if (imc<16)
+                devuelvo = TipoIMC.DESNUTRIDO;
+            else if (imc>=16 && imc<18.5)
+                devuelvo = TipoIMC.BAJOPESO;
+            else if (imc>=18.5 && imc < 25)
+                devuelvo = TipoIMC.NORMAL;
+            else if (imc>=25 && imc < 31)
+                devuelvo = TipoIMC.SOBREPESO;
+            else devuelvo = TipoIMC.OBESO;
+            return devuelvo;
+        }
+    }
+
+    public String cargarStrings(TipoIMC tipo){
+        // ahora hay que traducir el tipo al idioma en curso
+        // usamos string dinamicas
         String obeso = getResources().getString(R.string.obeso);
         String sobrepeso = getResources().getString(R.string.sobrepeso);
         String normal = getResources().getString(R.string.normal);
@@ -529,25 +533,7 @@ public void asignarimagen(TipoIMC tipo) {
                 break;
         }
 
-        tipoCalculado.setText(""+ tipotraducido);        // asignar imagen en funcion del tipo
-        asignarimagen(tipo);
-    }
-
-
-    public enum TipoIMC {DESNUTRIDO, BAJOPESO, NORMAL, SOBREPESO, OBESO;
-        public static TipoIMC traduceIMC (double imc)
-        {
-            TipoIMC devuelvo = null;
-            if (imc<16)
-                devuelvo = TipoIMC.DESNUTRIDO;
-            else if (imc>=16 && imc<18.5)
-                devuelvo = TipoIMC.BAJOPESO;
-            else if (imc>=18.5 && imc < 25)
-                devuelvo = TipoIMC.NORMAL;
-            else if (imc>=25 && imc < 31)
-                devuelvo = TipoIMC.SOBREPESO;
-            else devuelvo = TipoIMC.OBESO;
-            return devuelvo;
-        }
+        return tipotraducido;
     }
 }
+

@@ -12,7 +12,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51354b98-1163-4d5f-9843-61a82d67d452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/example/indicemasacorporalcasa/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/indicemasacorporalcasa/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$3.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$4.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$5.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$6.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/280/com/example/indicemasacorporalcasa/MainActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity$TipoIMC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/example/indicemasacorporalcasa/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,9 +131,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
+            <state relative-caret-position="31">
+              <caret line="465" column="53" lean-forward="true" selection-start-line="465" selection-start-column="53" selection-end-line="465" selection-end-column="53" />
               <folding>
+                <element signature="e#3182#3609#0" expanded="true" />
+                <element signature="e#3608#3609#0" expanded="true" />
                 <element signature="method#calcularIMC1#0;class#MainActivity#0" />
                 <element signature="method#onSaveInstanceState#0;class#MainActivity#0" />
                 <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" />
@@ -98,8 +144,13 @@
                 <element signature="e#9769#9770#0" expanded="true" />
                 <element signature="method#kk#0;class#MainActivity#0" />
                 <element signature="method#asignarimagen#0;class#MainActivity#0" />
-                <element signature="method#simularcalcularIMC#0;class#MainActivity#0" />
                 <element signature="class#TipoIMC#0;class#MainActivity#0" />
+                <element signature="method#cargarStrings#0;class#MainActivity#0" />
+                <element signature="e#20308#20348#0" expanded="true" />
+                <element signature="e#20377#20421#0" expanded="true" />
+                <element signature="e#20447#20488#0" expanded="true" />
+                <element signature="e#20516#20559#0" expanded="true" />
+                <element signature="e#20589#20634#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,8 +212,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1571" />
-    <option name="y" value="71" />
+    <option name="x" value="1464" />
     <option name="width" value="1227" />
     <option name="height" value="756" />
   </component>
@@ -183,7 +233,7 @@
     <property name="device.picker.selection" value="RQ3002LF9X" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -330,11 +380,19 @@
       <option name="project" value="LOCAL" />
       <updated>1557850898353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="version con uso de string dinamicas para traduccion">
+      <created>1557852103041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557852103041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1571" y="71" width="1227" height="756" extended-state="0" />
+    <frame x="1464" y="0" width="1227" height="756" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.24962293" />
       <window_info x="612" y="161" width="119" height="210" id="Palette " order="1" type="FLOATING" weight="0.19834088" />
@@ -346,14 +404,14 @@
       <window_info id="Resources Explorer" order="7" weight="0.32915568" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Favorites" order="9" side_tool="true" weight="0.3295626" />
-      <window_info anchor="bottom" id="GitHub Pull Requests" weight="0.32905295" />
+      <window_info anchor="bottom" id="GitHub Pull Requests" weight="0.32744783" />
       <window_info anchor="bottom" id="Messages" weight="0.32905295" />
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.9162269" weight="0.32905295" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49736148" weight="0.4670947" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49868074" weight="0.44430217" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.49934036" visible="true" weight="0.32905295" />
+      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49934036" weight="0.32905295" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5012854" side_tool="true" weight="0.32744783" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49871466" weight="0.32744783" />
       <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49670184" weight="0.20385233" />
@@ -379,13 +437,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java</url>
-          <line>132</line>
+          <line>107</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java</url>
-          <line>130</line>
+          <line>105</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -530,9 +588,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
+        <state relative-caret-position="31">
+          <caret line="465" column="53" lean-forward="true" selection-start-line="465" selection-start-column="53" selection-end-line="465" selection-end-column="53" />
           <folding>
+            <element signature="e#3182#3609#0" expanded="true" />
+            <element signature="e#3608#3609#0" expanded="true" />
             <element signature="method#calcularIMC1#0;class#MainActivity#0" />
             <element signature="method#onSaveInstanceState#0;class#MainActivity#0" />
             <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" />
@@ -541,8 +601,13 @@
             <element signature="e#9769#9770#0" expanded="true" />
             <element signature="method#kk#0;class#MainActivity#0" />
             <element signature="method#asignarimagen#0;class#MainActivity#0" />
-            <element signature="method#simularcalcularIMC#0;class#MainActivity#0" />
             <element signature="class#TipoIMC#0;class#MainActivity#0" />
+            <element signature="method#cargarStrings#0;class#MainActivity#0" />
+            <element signature="e#20308#20348#0" expanded="true" />
+            <element signature="e#20377#20421#0" expanded="true" />
+            <element signature="e#20447#20488#0" expanded="true" />
+            <element signature="e#20516#20559#0" expanded="true" />
+            <element signature="e#20589#20634#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,7 +11,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51354b98-1163-4d5f-9843-61a82d67d452" name="Default Changelist" comment="" />
+    <list default="true" id="51354b98-1163-4d5f-9843-61a82d67d452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+            <state relative-caret-position="224">
+              <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
               <folding>
                 <element signature="method#calcularIMC1#0;class#MainActivity#0" />
                 <element signature="method#onSaveInstanceState#0;class#MainActivity#0" />
@@ -166,38 +168,13 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="IndiceMasaCorporalCasa" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="IndiceMasaCorporalCasa" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="IndiceMasaCorporalCasa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IndiceMasaCorporalCasa" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -358,11 +335,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1571" y="71" width="1227" height="756" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.24962293" />
       <window_info x="612" y="161" width="119" height="210" id="Palette " order="1" type="FLOATING" weight="0.19834088" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26992288" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.26992288" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.3295626" />
       <window_info id="Build Variants" order="4" side_tool="true" weight="0.3295626" />
       <window_info id="Image Layers" order="5" />
@@ -370,14 +346,14 @@
       <window_info id="Resources Explorer" order="7" weight="0.32915568" />
       <window_info id="Capture Tool" order="8" />
       <window_info id="Favorites" order="9" side_tool="true" weight="0.3295626" />
-      <window_info anchor="bottom" id="GitHub Pull Requests" visible="true" weight="0.32905295" />
+      <window_info anchor="bottom" id="GitHub Pull Requests" weight="0.32905295" />
       <window_info anchor="bottom" id="Messages" weight="0.32905295" />
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.9162269" weight="0.32905295" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49736148" weight="0.4670947" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49868074" weight="0.44430217" />
-      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.49934036" weight="0.33026114" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.49934036" visible="true" weight="0.32905295" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5012854" side_tool="true" weight="0.32744783" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49871466" weight="0.32744783" />
       <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49670184" weight="0.20385233" />
@@ -554,8 +530,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/indicemasacorporalcasa/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        <state relative-caret-position="224">
+          <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
           <folding>
             <element signature="method#calcularIMC1#0;class#MainActivity#0" />
             <element signature="method#onSaveInstanceState#0;class#MainActivity#0" />

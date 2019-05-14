@@ -13,4 +13,9 @@
     <string name="alturaprevia">sin dato</string>
     <string name="boton_hombre">man</string>
     <string name="boton_mujer">woman</string>
+    <string name="obeso">OBESE</string>
+    <string name="sobrepeso">OVERWEIGHT</string>
+    <string name="normal">HEALTHY WEIGHT</string>
+    <string name="bajopeso">UNDERWEIGHT</string>
+    <string name="desnutrido">SEVERELY UNDERWEIGHT</string>
 </resources>

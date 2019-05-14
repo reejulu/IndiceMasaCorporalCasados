@@ -12,4 +12,9 @@
     <string name="alturaprevia">sin dato</string>
     <string name="boton_hombre">hombre</string>
     <string name="boton_mujer">mujer</string>
+    <string name="obeso">OBESO</string>
+    <string name="sobrepeso">SOBREPESO</string>
+    <string name="normal">NORMAL</string>
+    <string name="bajopeso">BAJOPESO</string>
+    <string name="desnutrido">DESNUTRIDO</string>
 </resources>

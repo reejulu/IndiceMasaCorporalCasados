@@ -3259,18 +3259,23 @@ public final class R {
     public static final int altura_requerida=0x7f0b0027;
     public static final int alturaprevia=0x7f0b0028;
     public static final int app_name=0x7f0b0029;
-    public static final int boton_borrar=0x7f0b002a;
-    public static final int boton_calculo=0x7f0b002b;
-    public static final int boton_hombre=0x7f0b002c;
-    public static final int boton_mujer=0x7f0b002d;
-    public static final int imc_obtenido=0x7f0b002e;
-    public static final int imc_tipo=0x7f0b002f;
-    public static final int peso_requerido=0x7f0b0030;
-    public static final int pesoprevio=0x7f0b0031;
-    public static final int saludo=0x7f0b0032;
-    public static final int search_menu_title=0x7f0b0033;
-    public static final int status_bar_notification_info_overflow=0x7f0b0034;
-    public static final int titulo=0x7f0b0035;
+    public static final int bajopeso=0x7f0b002a;
+    public static final int boton_borrar=0x7f0b002b;
+    public static final int boton_calculo=0x7f0b002c;
+    public static final int boton_hombre=0x7f0b002d;
+    public static final int boton_mujer=0x7f0b002e;
+    public static final int desnutrido=0x7f0b002f;
+    public static final int imc_obtenido=0x7f0b0030;
+    public static final int imc_tipo=0x7f0b0031;
+    public static final int normal=0x7f0b0032;
+    public static final int obeso=0x7f0b0033;
+    public static final int peso_requerido=0x7f0b0034;
+    public static final int pesoprevio=0x7f0b0035;
+    public static final int saludo=0x7f0b0036;
+    public static final int search_menu_title=0x7f0b0037;
+    public static final int sobrepeso=0x7f0b0038;
+    public static final int status_bar_notification_info_overflow=0x7f0b0039;
+    public static final int titulo=0x7f0b003a;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;

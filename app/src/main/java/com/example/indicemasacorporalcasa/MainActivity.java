@@ -21,8 +21,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // saveInstanceState ...es como si fuera un saquito para guardar cosas
+
+        if (savedInstanceState==null){
+            Log.i("MIAPP","Estoy en onCreate la primera vez");
+
+        }else {
+            Log.i("MIAPP","Estoy en onCreate con cosas guardadas");
+            boolean valor_guardado = savedInstanceState.getBoolean("CARGADA");
+            Log.i("MIAPP","Estoy en onCreate: CARGADA = "+ valor_guardado);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // para coger valores String de forma dinamica
@@ -94,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         // ahora asignar la imagen
         imageView.setImageResource(R.mipmap.ic_launcher);
         // para ejecutar la simulacion del boton calcular IMC
-
+        /**
         String titulo = getResources().getString(R.string.titulo);
         String obeso = "OBESO";
         String sobrepeso = "SOBREPESO";
@@ -111,9 +122,12 @@ public class MainActivity extends AppCompatActivity {
             bajopeso = "UNDERWEIGHT";
             desnutrido = "SEVERELY UNDERWEIGHT";
         }
-
+        */
         // PARA QUE SOLO SE EJECUTE LA PRIMERA VEZ EL METODO SIMULARCALCULARIMC
-
+        if (savedInstanceState == null){
+            simularcalcularIMC();
+        }
+        /**
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previouslyStarted = preferences.getBoolean(getString(R.string.alturaprevia),false);
         if (!previouslyStarted){
@@ -122,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             simularcalcularIMC();
         }
-
+        */
 
 
 
@@ -139,6 +153,7 @@ NumberPicker.OnValueChangeListener onValueChangeListener = new NumberPicker.OnVa
         TextView pesoelegido = findViewById(R.id.txtpesoelegido);
         int valor = numberPicker.getValue();
         pesoelegido.setText(""+valor);
+        simularcalcularIMC();
     }
 };
 
@@ -148,6 +163,7 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
         TextView alturaelegida = findViewById(R.id.txtalturaelegida);
         int altura = numberPicker1.getValue();
         alturaelegida.setText(""+altura);
+        simularcalcularIMC();
     }
 };
 
@@ -172,7 +188,7 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("MIAPP","Estou en onStop");
+        Log.i("MIAPP","Estoy en onStop");
     }
 
 
@@ -203,6 +219,11 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        outState.putBoolean("CARGADA",true);  // para indicar
+
+    //    int valor_peso = this.numberPicker.getValue();
+    //    int valor_altura = this.numberPicker1.getValue();
+
         TextView pesoelegido = findViewById(R.id.txtpesoelegido);
         TextView alturaelegida = findViewById(R.id.txtalturaelegida);
         outState.putString("pesoprevio",pesoelegido.getText().toString());
@@ -244,8 +265,10 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
 
     }
 
-public void calcularIMC (View view)
-{
+public void calcularIMC (View view) {
+    simularcalcularIMC();
+}
+private void kk() {
     // TODO se ejecuta al presionar el boton llamado button
             // @ ESTA PARTE SE USO INICIALMENTE CUANDO LOS DATOS SE RECOGIAN DE DOS EDITTEXT
             // en caso de no tener nada escrito en peso o altura porner algo
@@ -306,38 +329,37 @@ public void calcularIMC (View view)
     // PARTE 5: TRANDUCCION AL IDIOMA DEL TERMINAL
     //        ESTA PARTE ESTA PREVISTA PARA ESPAÑOL-INGLES Y VICEVERSA SOLAMENTE.
             // ahora hay que traducir el tipo al idioma en curso
-    String titulo = getResources().getString(R.string.titulo);
-    String obeso = "OBESO";
-    String sobrepeso = "SOBREPESO";
-    String normal = "NORMAL";
-    String bajopeso = "BAJOPESO";
-    String desnutrido = "DESNUTRIDO";
-    if (titulo.contains("Indice")) {
-        // esta en español solo asignar el valor a la casilla
-        tipoCalculado.setText(""+ tipo);
-    }else {
-        obeso = "OBESE";
-        sobrepeso = "OVERWEIGHT";
-        normal = "HEALTHY WEIGHT";
-        bajopeso = "UNDERWEIGHT";
-        desnutrido = "SEVERELY UNDERWEIGHT";
+
+    //String titulo = getResources().getString(R.string.titulo);
+    String obeso = getResources().getString(R.string.obeso);
+    String sobrepeso = getResources().getString(R.string.sobrepeso);
+    String normal = getResources().getString(R.string.normal);
+    String bajopeso = getResources().getString(R.string.bajopeso);
+    String desnutrido = getResources().getString(R.string.desnutrido);
+
+
 
         String tipotraducido = null;
         switch (tipo) {
-            case OBESO: tipotraducido = obeso;
-            break;
-            case SOBREPESO: tipotraducido = sobrepeso;
+            case OBESO:
+                tipotraducido = obeso;
                 break;
-            case NORMAL: tipotraducido = normal;
+            case SOBREPESO:
+                tipotraducido = sobrepeso;
                 break;
-            case BAJOPESO: tipotraducido = bajopeso;
+            case NORMAL:
+                tipotraducido = normal;
                 break;
-            case DESNUTRIDO: tipotraducido = desnutrido;
+            case BAJOPESO:
+                tipotraducido = bajopeso;
                 break;
-
+            case DESNUTRIDO:
+                tipotraducido = desnutrido;
+                break;
         }
+
         tipoCalculado.setText(""+ tipotraducido);
-    }
+
 
     // PARTE 6: ASIGNACION DE IMAGEN POR TIPO
     asignarimagen(tipo);
@@ -353,7 +375,7 @@ public void asignarimagen(TipoIMC tipo) {
     RadioButton hombre = findViewById(R.id.radioButton2);
     RadioButton mujer = findViewById(R.id.radioButton);
 
-    if (tipo.toString() == "OBESO" || tipo.toString() == "OBESE"){
+    if (tipo == TipoIMC.OBESO ){
 
         // ahora asignar la imagen
         if (hombre.isChecked() == true){
@@ -363,7 +385,7 @@ public void asignarimagen(TipoIMC tipo) {
         }
 
     } else {
-        if (tipo.toString() == "SOBREPESO" || tipo.toString() == "OVERWEIGHT") {
+        if (tipo == TipoIMC.SOBREPESO) {
 
             // ahora asignar la imagen
             if (hombre.isChecked() == true){
@@ -373,7 +395,7 @@ public void asignarimagen(TipoIMC tipo) {
             }
         }
         else {
-            if (tipo.toString() == "NORMAL" || tipo.toString() == "HEALTHY WEIGHT"){
+            if (tipo == TipoIMC.NORMAL){
 
                 // ahora asignar la imagen
                 if (hombre.isChecked() == true){
@@ -384,7 +406,7 @@ public void asignarimagen(TipoIMC tipo) {
 
             }
             else {
-                if (tipo.toString() == "BAJOPESO"|| tipo.toString() == "UNDERWEIGHT" ){
+                if (tipo == TipoIMC.BAJOPESO){
 
                     // ahora asignar la imagen
                     if (hombre.isChecked() == true){
@@ -395,7 +417,7 @@ public void asignarimagen(TipoIMC tipo) {
 
 
                 }else {
-                    if (tipo.toString() == "DESNUTRIDO"|| tipo.toString() == "SEVERELY UNDERWEIGHT" ){
+                    if (tipo == TipoIMC.DESNUTRIDO ){
 
                         // ahora asignar la imagen
                         if (hombre.isChecked() == true){
@@ -480,39 +502,34 @@ public void asignarimagen(TipoIMC tipo) {
         TipoIMC tipo = TipoIMC.traduceIMC( imc);
 
         // ahora hay que traducir el tipo al idioma en curso
-        String titulo = getResources().getString(R.string.titulo);
-        String obeso = "OBESO";
-        String sobrepeso = "SOBREPESO";
-        String normal = "NORMAL";
-        String bajopeso = "BAJOPESO";
-        String desnutrido = "DESNUTRIDO";
+        String obeso = getResources().getString(R.string.obeso);
+        String sobrepeso = getResources().getString(R.string.sobrepeso);
+        String normal = getResources().getString(R.string.normal);
+        String bajopeso = getResources().getString(R.string.bajopeso);
+        String desnutrido = getResources().getString(R.string.desnutrido);
 
-        if (titulo.contains("Indice")) {
-            // esta en español solo asignar el valor a la casilla
-            tipoCalculado.setText(""+ tipo);
-        }else {
-            obeso = "OBESE";
-            sobrepeso = "OVERWEIGHT";
-            normal = "HEALTHY WEIGHT";
-            bajopeso = "UNDERWEIGHT";
-            desnutrido = "SEVERELY UNDERWEIGHT";
 
-            String tipotraducido = null;
-            switch (tipo) {
-                case OBESO: tipotraducido = obeso;
-                    break;
-                case SOBREPESO: tipotraducido = sobrepeso;
-                    break;
-                case NORMAL: tipotraducido = normal;
-                    break;
-                case BAJOPESO: tipotraducido = bajopeso;
-                    break;
-                case DESNUTRIDO: tipotraducido = desnutrido;
-                    break;
-            }
-            tipoCalculado.setText(""+ tipotraducido);
+
+        String tipotraducido = null;
+        switch (tipo) {
+            case OBESO:
+                tipotraducido = obeso;
+                break;
+            case SOBREPESO:
+                tipotraducido = sobrepeso;
+                break;
+            case NORMAL:
+                tipotraducido = normal;
+                break;
+            case BAJOPESO:
+                tipotraducido = bajopeso;
+                break;
+            case DESNUTRIDO:
+                tipotraducido = desnutrido;
+                break;
         }
-        // asignar imagen en funcion del tipo
+
+        tipoCalculado.setText(""+ tipotraducido);        // asignar imagen en funcion del tipo
         asignarimagen(tipo);
     }
 

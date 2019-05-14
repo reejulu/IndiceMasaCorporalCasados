@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">IndiceMasaCorporalCasa</string>
+    <string name="saludo">Hola</string>
+    <string name="titulo">Cálculo de Indice de Masa Corporal</string>
+    <string name="peso_requerido">Indique su peso en (Kg)</string>
+    <string name="altura_requerida">Indique su altura en (cm)</string>
+    <string name="imc_obtenido">IMC actual</string>
+    <string name="imc_tipo">IMC tipo</string>
+    <string name="boton_calculo">CALCULO de IMC</string>
+    <string name="boton_borrar">VALOR INICIAL</string>
+    <string name="pesoprevio">sin dato</string>
+    <string name="alturaprevia">sin dato</string>
+    <string name="boton_hombre">hombre</string>
+    <string name="boton_mujer">mujer</string>
+</resources>

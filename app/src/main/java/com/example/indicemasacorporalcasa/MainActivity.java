@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    NumberPicker numberPicker;
+    NumberPicker numberPicker1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("MIAPP","Estoy en onCrete");
         // DEFINO NUMBERPICKER - PARA PESO Y ALTURA
-        NumberPicker numberPicker = findViewById(R.id.editPeso);
-        NumberPicker numberPicker1 = findViewById(R.id.editAltura);
+        numberPicker = findViewById(R.id.editPeso);
+        numberPicker1 = findViewById(R.id.editAltura);
         //      DEFINO RANGO DE VALORES
         numberPicker.setMinValue(40);
         numberPicker.setMaxValue(200);
@@ -66,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
               // RESEO INICIAL DE LOS BOTONES
         radioGroup.clearCheck();
         radioGroup.check(hombre.getId());
-              // AÑADIR EL LISTENER AL RADIOGROUP
+              // AÑADIR EL LISTENER AL RADIOGROUP (no hace falta)
+        /**
         radioGroup.setOnCheckedChangeListener(
                 new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        */
 
         hombre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,10 +116,6 @@ public class MainActivity extends AppCompatActivity {
             simularcalcularIMC();
         }
         */
-
-
-
-
     }
 
 
@@ -196,13 +196,17 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
         super.onSaveInstanceState(outState);
         outState.putBoolean("CARGADA",true);  // para indicar
 
-    //    int valor_peso = this.numberPicker.getValue();
-    //    int valor_altura = this.numberPicker1.getValue();
-
+        //OPCION 1: GUARDO EL VALOR ACTUAL DEL PESO Y ALTURA SELECCIONADOS
+                int valor_peso = this.numberPicker.getValue();
+                int valor_altura = this.numberPicker1.getValue();
+                outState.putInt("alturaelegida",valor_altura);
+                outState.putInt("pesoelegido",valor_peso);
+         //OPCION 2: GUARDAR LA INFORMACION EN DOS TEXVIEW INVISIBLES
         TextView pesoelegido = findViewById(R.id.txtpesoelegido);
         TextView alturaelegida = findViewById(R.id.txtalturaelegida);
         outState.putString("pesoprevio",pesoelegido.getText().toString());
         outState.putString("alturaprevia",alturaelegida.getText().toString());
+
         Log.i("MIAPP","Estoy en onSaveInstanceState");
     }
 
@@ -212,6 +216,17 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.i("MIAPP","Estoy en onRestoreInstanceState");
+        //OPCION 1: RECUPERAR LA INFORMACION ENVIADA EN LAS VARIABLES
+        // tambien se puede recuperar en el Oncreate
+        int valor_peso = savedInstanceState.getInt("pesoelegido");
+        int valor_altura = savedInstanceState.getInt("alturaelegida");
+        numberPicker.setValue(valor_peso);
+        numberPicker1.setValue(valor_altura);
+                //           y creo otro metodo igual que simularIMC pero para que recoja los datos
+                //           de peso y altura directamente de los numberpickers
+        simularcalcularIMCconNumberpicker();
+        //OPCION 2 : RECUPERAR LA INFORMACION GUARDADA EN LOS DOS TEXTVIEW INVISIBLES
+
         TextView pesoelegido = findViewById(R.id.txtpesoelegido);
         TextView alturaelegida = findViewById(R.id.txtalturaelegida);
         pesoelegido.setText(savedInstanceState.getString("pesoprevio"));
@@ -221,8 +236,35 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
         numberPicker.setValue(Integer.parseInt(pesoelegido.getText().toString()));
         NumberPicker numberPicker1 = findViewById(R.id.editAltura);
         numberPicker1.setValue(Integer.parseInt(alturaelegida.getText().toString()));
-        simularcalcularIMC();
+        // como en otras partes de este ejercicio usa los textview ,,no los quito ,
+        // solo pretento ver que funciona la solucion de numberpicker
+        //simularcalcularIMC();
 
+    }
+
+    private void simularcalcularIMCconNumberpicker() {
+
+        Log.i("MIAPP","Estoy en simularcalcularIMCconNumberpicker");
+
+        float peso = numberPicker.getValue();
+        float alturaescrita = numberPicker1.getValue();
+        double imc = calcularIMC1( peso, alturaescrita);
+
+        Log.i("MIAPP","peso : "+peso);
+        Log.i("MIAPP","altura : "+alturaescrita);
+
+        TextView imcCalculado = findViewById(R.id.txtIMC);
+        imcCalculado.setText(""+ (int) imc);
+
+
+        TextView tipoCalculado = findViewById(R.id.txtIMCTipo);
+
+        TipoIMC tipo = TipoIMC.traduceIMC( imc);
+
+        String tipotraducido = cargarStrings(tipo);
+
+        tipoCalculado.setText(""+ tipotraducido);        // asignar imagen en funcion del tipo
+        asignarimagen(tipo);
     }
 
     public void borrar (View view){
@@ -242,102 +284,6 @@ NumberPicker.OnValueChangeListener onValueChangeListener1 = new NumberPicker.OnV
 
 public void calcularIMC (View view) {
     simularcalcularIMC();
-}
-private void kk() {
-    // TODO se ejecuta al presionar el boton llamado button
-            // @ ESTA PARTE SE USO INICIALMENTE CUANDO LOS DATOS SE RECOGIAN DE DOS EDITTEXT
-            // en caso de no tener nada escrito en peso o altura porner algo
-            // defecto
-                /**
-                EditText  pesoescrito1 = findViewById(R.id.editPeso);
-                String peso1 = pesoescrito1.getText().toString();
-                if (peso1.isEmpty()){
-                    pesoescrito1.setText("72");
-                 }
-                EditText  alturaescrita1 = findViewById(R.id.editAltura);
-                String altura1 = alturaescrita1.getText().toString();
-                if (altura1.isEmpty()){
-                 alturaescrita1.setText("182");
-                 }
-                 */
-                 // El peso se recoge del edit text llamado editPeso
-                 /**
-                     EditText  pesoescrito = findViewById(R.id.editPeso);
-                     String peso = pesoescrito.getText().toString();
-                     Float pesonumerico = Float.parseFloat(peso);
-                     // La Altura se recoge del edit text llamado editAltura
-                     EditText alturaescrita = findViewById(R.id.editAltura);
-                     String altura = alturaescrita.getText().toString();
-                     Float alturanumerica = Float.parseFloat(altura);
-                     */
-                     // Se calcula el IMC y su correpondiente tipo
-                     // double imc = calcularIMC1(pesonumerico, alturanumerica);
-
-    // @ OPCION FINAL BASADA EN PICKERNUMBER
-    // PARTE 1: RE SE RECOGEN LOS DATOS DE PESO Y ALTURA
-    // Hemos guardado el peso y altura elegidas en dos text view diferentes
-          // PARA LOS VALORES INICIALES SE HAN USADO DOS TEXTVIEW OCULTOS
-          //      CUYOS VALOR "TEXT" TIENEN
-          //              -> PESO = "72" -> ALTURA = "182"
-          // POSTERIORMENTE ESTA INFORMACION ES ACTUALIZADA CON EL VALOR QUE SE
-          // VAYA SELECCIONANDO EN EL PICKERNUMBER
-    TextView  pesoescrito = findViewById(R.id.txtpesoelegido);
-    String peso = pesoescrito.getText().toString();
-    Float peso1 = Float.parseFloat(peso);
-    TextView  alturaescrita = findViewById(R.id.txtalturaelegida);
-    String altura = alturaescrita.getText().toString();
-    Float altura1 = Float.parseFloat(altura);
-
-    // PARTE 2: SE CALCULA EL IMC CON LOS DATOS RECOGIDOS
-            // Se calcula el IMC y su correpondiente tipo
-    double imc = calcularIMC1((float) peso1, (float) altura1);
-            // El IMC se presenta en el textview llamado txtIMC
-    // PARTE 3: SE PRESENTA EN EL TEXTVIEW "txtIMC" EL imc OBTENIDO
-    TextView imcCalculado = findViewById(R.id.txtIMC);
-    imcCalculado.setText(""+ (int) imc);
-    // PARTE 4: EL VALOR NUMERICO "imc" SE TRADUCE AL ENUM CORRESPONDIENTE
-           // El IMC tipo se presenta en el textview llamado txtIMCtipo
-    TextView tipoCalculado = findViewById(R.id.txtIMCTipo);
-    TipoIMC tipo = TipoIMC.traduceIMC( imc);
-
-
-    // PARTE 5: TRANDUCCION AL IDIOMA DEL TERMINAL
-    //        ESTA PARTE ESTA PREVISTA PARA ESPAÑOL-INGLES Y VICEVERSA SOLAMENTE.
-            // ahora hay que traducir el tipo al idioma en curso
-
-    //String titulo = getResources().getString(R.string.titulo);
-    String obeso = getResources().getString(R.string.obeso);
-    String sobrepeso = getResources().getString(R.string.sobrepeso);
-    String normal = getResources().getString(R.string.normal);
-    String bajopeso = getResources().getString(R.string.bajopeso);
-    String desnutrido = getResources().getString(R.string.desnutrido);
-
-
-
-        String tipotraducido = null;
-        switch (tipo) {
-            case OBESO:
-                tipotraducido = obeso;
-                break;
-            case SOBREPESO:
-                tipotraducido = sobrepeso;
-                break;
-            case NORMAL:
-                tipotraducido = normal;
-                break;
-            case BAJOPESO:
-                tipotraducido = bajopeso;
-                break;
-            case DESNUTRIDO:
-                tipotraducido = desnutrido;
-                break;
-        }
-
-        tipoCalculado.setText(""+ tipotraducido);
-
-
-    // PARTE 6: ASIGNACION DE IMAGEN POR TIPO
-    asignarimagen(tipo);
 }
 
 public void asignarimagen(TipoIMC tipo) {
@@ -430,7 +376,6 @@ public void asignarimagen(TipoIMC tipo) {
          alturaescrita1.setText("182");
          }
          */
-
         // usando NumberPicker
         // como hemos guardado el peso y altura elegidas en dos text view diferentes
         // ahora hay que recoger el valor de esos valore
@@ -460,9 +405,6 @@ public void asignarimagen(TipoIMC tipo) {
          String altura = alturaescrita.getText().toString();
          Float alturanumerica = Float.parseFloat(altura);
          */
-
-
-
         // Se calcula el IMC y su correpondiente tipo
         // double imc = calcularIMC1(pesonumerico, alturanumerica);
         double imc = calcularIMC1((float) peso1, (float) altura1);

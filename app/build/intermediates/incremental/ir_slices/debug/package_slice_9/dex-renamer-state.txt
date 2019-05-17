@@ -1,4 +1,4 @@
-#Tue May 14 18:07:16 CEST 2019
+#Thu May 16 18:40:42 CEST 2019
 base.0=D\:\\Users\\juan luis\\Desktop\\mio\\CursoAndroid\\IndiceMasaCorporalCasa\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
 path.0=classes.dex
 renamed.0=classes.dex

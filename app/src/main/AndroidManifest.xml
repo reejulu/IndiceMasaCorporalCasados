@@ -9,7 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WebviewIMC"></activity>
+        <activity android:name=".WebviewIMC">
+      <!-- vamos a definir nuestar Activity como con capacidad de ver pag web
+categoria DEFAULT + BROWSABLE
+accion VIEW y
+data Scheme -Cuando llega un Intent implicito pidiendo esta web,,,me ofrezco
+como Actividad posible para abrir la web
+-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+              <category android:name="android.intent.category.DEFAULT"></category>
+                <data android:scheme="https" android:host="es.wikipedia.org"></data>
+                <data android:scheme="http" android:host="es.wikipedia.org"></data>
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
 
             <!--

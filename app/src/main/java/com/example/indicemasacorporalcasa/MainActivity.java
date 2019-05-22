@@ -27,8 +27,19 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState==null){
             Log.i("MIAPP","Estoy en onCreate la primera vez");
 
-         //   Intent intent = new Intent(MainActivity.this, WebviewIMC.class);
-         //   startActivity(intent);
+
+            // esto es una prueba ..donde hemos definido previamente en el AndroidManifest.xml
+            // que la actividad WebviewIMC es capaz de visualizar la web del tipo https://es.wikipedia.org
+            // la primera vez que se ejecuta esta APP pasa por aqui y vemos que nuestra Activity se muestra
+            // como app disponible.
+            // despues al cerrar la web ,,vuelve a la app de imc y si manualmente conectamos a web wikipedia
+            // va directo
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal"));
+            String  texto = "¿Con que aplicacion quieres continuar?";
+            Intent chooser = Intent.createChooser(intent,texto);
+
+           startActivity(chooser);
 
         }else {
             Log.i("MIAPP","Estoy en onCreate con cosas guardadas");
@@ -435,6 +446,8 @@ public void asignarimagen(TipoIMC tipo) {
     }
 
     public void verwiki(View view) {
+
+
         //Button boton = findViewById(R.id.verenwiki);
         Intent intent = new Intent(MainActivity.this, WebviewIMC.class);
         startActivity(intent);

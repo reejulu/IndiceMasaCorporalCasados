@@ -828,6 +828,8 @@ id txtpesoelegido
 id uniform
 id up
 id useLogo
+id verenwiki
+id webview
 id withText
 id wrap
 id wrap_content
@@ -865,6 +867,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_webview_imc
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

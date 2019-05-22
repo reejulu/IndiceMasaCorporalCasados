@@ -1,9 +1,13 @@
 package com.example.indicemasacorporalcasa;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
@@ -22,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState==null){
             Log.i("MIAPP","Estoy en onCreate la primera vez");
+
+         //   Intent intent = new Intent(MainActivity.this, WebviewIMC.class);
+         //   startActivity(intent);
 
         }else {
             Log.i("MIAPP","Estoy en onCreate con cosas guardadas");
@@ -425,6 +432,17 @@ public void asignarimagen(TipoIMC tipo) {
 
         tipoCalculado.setText(""+ tipotraducido);        // asignar imagen en funcion del tipo
         asignarimagen(tipo);
+    }
+
+    public void verwiki(View view) {
+        //Button boton = findViewById(R.id.verenwiki);
+        Intent intent = new Intent(MainActivity.this, WebviewIMC.class);
+        startActivity(intent);
+
+      //  String cadenadebusqueda = "https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal";
+      //  Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(cadenadebusqueda));
+      //  startActivity(intent);
+
     }
 
 
